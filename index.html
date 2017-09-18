@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <p id="new"></p>
+    <label for="">Число</label>
+    <input type="text" id="number" />
+    <label for="">Номер</label>
+    <input type="text" id="index" />
+    <button  id="show" onclick="addItem(document.getElementById('number').value , document.getElementById('index').value,document.getElementById('new'))" >OK</button>
+    </br>
+    <button onclick="popMethod()">pop()</button>
+    <button onclick="shiftMethod()">shift()</button>
+    <button onclick="pushMethod(document.getElementById('new'))">push()</button>
+    <!-- <button onclick="deleteMethod(document.getElementById('new'))">del()</button> -->
+</body>
+</html>
