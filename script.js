@@ -32,7 +32,7 @@ function shiftMethod() {
     alert("Первый е-т: "+firstElem);
 }
 
-function pushMethod(elem){
+function pushMethodModern(elem){
 	var numberVal = document.getElementById("number").value;
 	var indexElem = document.getElementById("index").value;
     array.splice(indexElem, 0, numberVal);
@@ -46,6 +46,26 @@ function pushMethod(elem){
     console.log("numberVal",array);
     alert(array);
 }
+function pushMethod(elem){
+    var numberVal = document.getElementById("number").value;
+    array.push(numberVal);
+    elem.innerHTML ='';
+    document.getElementById("number").value = "";
+    for (var i = 0; i < array.length; i++) {
+        elem.innerHTML  = elem.innerHTML+array[i]+"</br>";
+    }
+}
+
+function unshiftMethod(elem) {
+    var numberVal = document.getElementById("number").value;
+    array.unshift(numberVal);
+    elem.innerHTML ='';
+    document.getElementById("number").value = "";
+    for (var i = 0; i < array.length; i++) {
+        elem.innerHTML  = elem.innerHTML+array[i]+"</br>";
+    }
+}
+
 
 /*
 function deleteMethod(elem){
